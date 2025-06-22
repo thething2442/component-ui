@@ -12,12 +12,11 @@ export default defineConfig({
       formats: ['es', 'cjs']
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'framer-motion', '@dnd-kit/core', '@dnd-kit/sortable', '@dnd-kit/utilities', 'clsx', 'tailwind-merge'],
+      external: ['react', 'react-dom', 'react/jsx-runtime', '@dnd-kit/core', '@dnd-kit/sortable', '@dnd-kit/utilities', 'clsx', 'tailwind-merge'],
       output: {
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
-          'framer-motion': 'framerMotion',
           '@dnd-kit/core': 'dndKitCore',
           '@dnd-kit/sortable': 'dndKitSortable',
           '@dnd-kit/utilities': 'dndKitUtilities',

@@ -1,4 +1,4 @@
-declare module 'customize-ui' {
+declare module 'react-drag-builder-ui' {
   import { ReactNode, RefObject } from 'react'
   import { MotionProps } from 'framer-motion'
 
