@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for the component library */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  /* Custom component styles */
+  .component-builder {
+    @apply bg-gray-50 min-h-screen;
+  }
+  
+  .component-palette {
+    @apply bg-white border border-gray-200 rounded-lg shadow-sm;
+  }
+  
+  .component-canvas {
+    @apply bg-gray-50 border-2 border-dashed border-gray-300 rounded-lg;
+  }
+  
+  .component-inspector {
+    @apply bg-white border border-gray-200 rounded-lg shadow-sm;
+  }
+}
+
+@layer utilities {
+  /* Custom utility classes */
+  .drag-handle {
+    @apply cursor-grab active:cursor-grabbing;
+  }
+  
+  .drop-zone {
+    @apply transition-colors duration-200;
+  }
+  
+  .drop-zone.drag-over {
+    @apply border-primary-400 bg-primary-50;
+  }
+} 
