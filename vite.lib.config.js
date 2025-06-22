@@ -7,9 +7,9 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.js'),
-      name: 'CustomizeUI',
-      fileName: (format) => `customize-ui.${format === 'es' ? 'esm' : format}.js`,
-      formats: ['es', 'cjs', 'umd']
+      name: 'ReactDragBuilderUI',
+      fileName: (format) => `react-drag-builder-ui.${format === 'es' ? 'esm' : 'cjs'}.js`,
+      formats: ['es', 'cjs']
     },
     rollupOptions: {
       external: ['react', 'react-dom', 'framer-motion', '@dnd-kit/core', '@dnd-kit/sortable', '@dnd-kit/utilities', 'clsx', 'tailwind-merge'],
@@ -26,7 +26,7 @@ export default defineConfig({
         },
         assetFileNames: (assetInfo) => {
           if (assetInfo.name === 'style.css') {
-            return 'customize-ui.css'
+            return 'react-drag-builder-ui.css'
           }
           return assetInfo.name
         }
